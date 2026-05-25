@@ -79,6 +79,25 @@ body {
 .film::before { top: 3px; }
 .film::after { bottom: 3px; }
 
+/* Intro hero — animations CSS pures (indépendantes du JS, jamais de hero blanc) */
+@keyframes intro-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.intro { opacity: 0; animation: intro-up 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+@keyframes letter-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+.letter { display: inline-block; opacity: 0; animation: letter-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.bob { animation: bob 2.2s ease-in-out infinite; }
+
 /* Égaliseur (la bande-son) — barres animées */
 .eq-bar {
   width: 4px;
